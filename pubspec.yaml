@@ -1,0 +1,57 @@
+name: arqami
+description: "أرقامي — تطبيق تعليمي لتعلم الأرقام للأطفال الناطقين بالعربية (4-6 سنوات)"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # واجهة Material 3
+  cupertino_icons: ^1.0.8
+
+  # التتبع بالإصبع (TraceWidget) — التقاط نقاط اللمس
+  signature: ^5.5.0
+
+  # حفظ التقدم محلياً (ProgressTracker + UnitProgress)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # نطق الأرقام والعبارات حياً بالعربية (Text-to-Speech) — بلا أي
+  # ملف صوتي خارجي. النقرات السريعة تُشغَّل عبر SystemSound المدمجة
+  # فـ Flutter (flutter/services)، فما محتجناش audioplayers حالياً.
+  flutter_tts: ^4.2.0
+
+  # AdMob — نفس نمط وقتي (COPPA / child-directed)
+  # فعّلها عند مرحلة الدمج مع الإعلانات
+  # google_mobile_ads: ^5.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+  # لازمين فقط إذا بغيتي تولّد unit_progress.g.dart تلقائياً
+  # عوض النسخة المكتوبة يدوياً المرفقة فالمشروع
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.13
+
+flutter:
+  uses-material-design: true
+
+  # لا يوجد assets مطلوبة حالياً — كل الأصوات (TTS/SystemSound) وكل
+  # الرسومات (CustomPainter/أيقونات Material) مدمجة فالكود بلا ملفات
+  # خارجية. إذا زدتي لاحقاً صوراً أو أصوات مسجّلة احترافية، فعّل قسم
+  # assets هنا وأشر لمجلداتها.
+
+  # فعّل هاد القسم إذا زدتي خط عربي مخصص (مثلاً Cairo أو نفس خط وقتي)
+  # fonts:
+  #   - family: Cairo
+  #     fonts:
+  #       - asset: assets/fonts/Cairo-Regular.ttf
+  #       - asset: assets/fonts/Cairo-Bold.ttf
+  #         weight: 700

@@ -1,0 +1,42 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+**/Pods/
+
+# Android
+android/.gradle/
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/local.properties
+android/**/gradle-wrapper.jar
+android/key.properties
+*.jks
+
+# macOS
+.DS_Store
+
+# ملفات توليد Hive (إذا شغّلت build_runner، سيعيد توليد unit_progress.g.dart)
+# احذف السطر التالي إذا تريد تتبع الملف المولّد يدوياً فالمستودع
+# lib/**/*.g.dart
+
+# ملفات بيئة حساسة
+.env
+*.keystore
